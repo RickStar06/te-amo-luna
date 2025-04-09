@@ -4,13 +4,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nosso Amor, Luna</title>
+  <title>Te Amo, Luna</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-pink-100 min-h-screen flex items-center justify-center p-4">
 
   <!-- Conteúdo principal -->
-  <div class="bg-white p-8 rounded-3xl shadow-2xl max-w-lg text-center animate-fade-in">
+  <div class="bg-white p-6 rounded-3xl shadow-2xl max-w-lg text-center animate-fade-in">
+    
+    <!-- Imagem -->
+    <img src="eu e ela.png" alt="Nós dois" class="rounded-2xl shadow-md mx-auto mb-6 max-w-full h-auto" />
+
     <h1 class="text-3xl font-bold text-pink-600 mb-4">Nosso Reencontro</h1>
     <p class="text-gray-700 text-lg leading-relaxed">
       Luna, o destino nos uniu de novo...<br />
@@ -50,7 +54,7 @@
 
       musica.play().then(() => {
         mensagem.classList.remove('hidden');
-      }).catch((e) => {
+      }).catch(() => {
         alert("Toque na tela para ativar a música.");
       });
     }
