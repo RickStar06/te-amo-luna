@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nosso Amor, Luna</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-pink-100 min-h-screen flex items-center justify-center p-4">
+
+  <!-- Conteúdo principal -->
+  <div class="bg-white p-8 rounded-3xl shadow-2xl max-w-lg text-center animate-fade-in">
+    <h1 class="text-3xl font-bold text-pink-600 mb-4">Nosso Reencontro</h1>
+    <p class="text-gray-700 text-lg leading-relaxed">
+      Luna, o destino nos uniu de novo...<br />
+      Nosso amor de adolescência nunca morreu — só esperou o momento certo pra florescer.
+      E agora, cada olhar, cada toque, cada palavra... é como reviver os melhores dias da minha vida.
+    </p>
+
+    <p class="mt-6 text-pink-500 font-semibold text-lg hidden" id="mensagem">
+      Eu te amo, Luna. E vou cuidar de você como sempre sonhei. 💖
+    </p>
+
+    <button onclick="tocarAmor()" class="mt-6 bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 px-6 rounded-full transition">
+      Clique para ouvir nossa música
+    </button>
+  </div>
+
+  <!-- Música local -->
+  <audio id="musica" preload="auto">
+    <source src="Careless Whisper (slowed).mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio.
+  </audio>
+
+  <style>
+    @keyframes fade-in {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in {
+      animation: fade-in 1s ease-out;
+    }
+  </style>
+
+  <script>
+    function tocarAmor() {
+      const musica = document.getElementById('musica');
+      const mensagem = document.getElementById('mensagem');
+
+      musica.play().then(() => {
+        mensagem.classList.remove('hidden');
+      }).catch((e) => {
+        alert("Toque na tela para ativar a música.");
+      });
+    }
+  </script>
+</body>
+</html>
